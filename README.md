@@ -6,7 +6,7 @@
 
 Moyu PPT (`moyu-ppt`) is an agent skill that turns articles, talks and pitch material into image-based PowerPoint decks with one consistent visual system: inspiration search, typography, per-slide spatial briefs, image generation and PPTX assembly.
 
-作者：**摸鱼小李**（公众号「摸鱼小李」，更新和用法都发在那里）。开源；技能本身不可拿去商业化，用它做 PPT 不受限，见[协议](#协议)。
+作者：**摸鱼小李**（公众号「摸鱼小李」，更新和用法都发在那里）。
 
 ## 效果
 
