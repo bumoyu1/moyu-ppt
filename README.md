@@ -12,7 +12,11 @@ Moyu PPT (`moyu-ppt`) is an agent skill that turns articles, talks and pitch mat
 
 <img src="assets/readme/demo.jpg" alt="摸鱼PPT 效果示例：一套 23 页的像素风知识型课件" width="860">
 
-示例：一套 23 页的知识型课件，像素风。每一页都是一张图，标题和正文画在图里。
+示例一：一套 23 页的知识型课件，像素风。每一页都是一张图，标题和正文画在图里。
+
+<img src="assets/readme/demo-2.jpg" alt="摸鱼PPT 效果示例：一套 16 页的方块像素风分享" width="860">
+
+示例二：一套 16 页的分享，方块像素游戏风格。封面、目录、结尾各有各的构图，内容页一页一个场景。
 
 ## 你可以直接这样说
 
