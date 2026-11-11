@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 2,
+  "id": "clear-path",
+  "name": "清晰路径",
+  "source": "原创角色字形示例，尚未绑定生成图片",
+  "styleWeight": 90,
+  "layoutWeight": 80,
+  "styleRefImage": null,
+  "layoutSourceImage": null,
+  "layoutRefImages": null,
+  "colors": {
+    "primaryBackground": "#F5F3EE",
+    "secondaryBackground": "#172D38",
+    "titleColor": "#172D38",
+    "textColor": "#34454D",
+    "accentColor": "#B7472A",
+    "decorColor": "#B9C8C8"
+  },
+  "typography": {
+    "roles": {
+      "display": {
+        "familyIntent": "与标题同源的方整展示字",
+        "skeleton": "中宫开放，横向略宽，部首结构完整",
+        "stroke": "粗笔画但保留内部空隙，末端只做微小斜切",
+        "center": "重心稳定，不逐字跳动",
+        "spacing": {"letterSpacingEm": 0.02, "lineHeight": 1.12},
+        "effects": [],
+        "sizeRatioToBody": 3.2,
+        "sampleText": "新的可能正在发生"
+      },
+      "title": {
+        "familyIntent": "开放方整的现代中文标题字",
+        "skeleton": "方形字面，横竖比例均衡，中宫开放，部首关系完整",
+        "stroke": "中粗且均匀，主笔收尾有很小的斜切，转折清楚",
+        "center": "视觉重心稳定，汉字与数字基线协调",
+        "spacing": {"letterSpacingEm": 0.015, "lineHeight": 1.18},
+        "effects": [],
+        "sizeRatioToBody": 2.1,
+        "sampleText": "让复杂问题变清楚"
+      },
+      "body": {
+        "familyIntent": "常规清晰无衬线正文",
+        "skeleton": "开放字腔，标准部首结构",
+        "stroke": "常规字重，不变形，不断笔",
+        "center": "稳定基线",
+        "spacing": {"letterSpacingEm": 0, "lineHeight": 1.5},
+        "effects": [],
+        "sizeRatioToBody": 1,
+        "sampleText": "明确问题的条件，再寻找可验证的答案。"
+      },
+      "label": {
+        "familyIntent": "与正文同源的清晰标签字",
+        "skeleton": "紧凑但不挤压的标准结构",
+        "stroke": "中等字重，完整笔画",
+        "center": "稳定基线",
+        "spacing": {"letterSpacingEm": 0.01, "lineHeight": 1.25},
+        "effects": [],
+        "sizeRatioToBody": 0.85,
+        "sampleText": "方案 A · 已验证 / 待验证"
+      },
+      "data": {
+        "familyIntent": "与正文协调的清晰数字字形",
+        "skeleton": "数字等高且便于列对齐，0/O、1/l 可区分",
+        "stroke": "中等字重，小数点与负号清晰",
+        "center": "基线稳定，数值与单位协调",
+        "spacing": {"letterSpacingEm": 0, "lineHeight": 1.2},
+        "effects": [],
+        "sizeRatioToBody": 1.2,
+        "sampleText": "2026 · −12.5% · 1,200 万"
+      }
+    },
+    "references": {},
+    "referencePolicy": {
+      "mode": "as-needed",
+      "defaultSpecimenRoles": ["title"],
+      "scope": "glyph-only",
+      "preserveExactText": true,
+      "transferColor": false,
+      "transferLayout": false,
+      "transferSampleText": false
+    }
+  },
+  "grid": {"columns": 12, "safeMarginPct": {"x": 5, "y": 6}, "gutterPct": 2},
+  "spacing": {"unit": "percent-of-slide-height", "base": 1.5, "sectionGap": 4.5},
+  "pageTypes": {
+    "cover": {"textRoles": ["display", "label"]},
+    "content": {"textRoles": ["title", "body", "label"]},
+    "data": {"textRoles": ["title", "data", "label"]}
+  },
+  "charts": {
+    "axes": "显示比较所需刻度与单位",
+    "seriesColors": ["#172D38", "#B7472A"],
+    "labels": "标签用 label，数值用 data"
+  }
+}

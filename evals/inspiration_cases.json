@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "status": "pending",
+  "evidence_type": "evaluation_plan",
+  "evidence_limits": "Offline unit tests verify deterministic search mechanics only. No provider search, model visual review, or human A/B review has been run for these cases.",
+  "protocol": {
+    "inputs": "For each case, freeze a licensed or user-provided local image pool. Include exact reposts, same-family color variants, attractive but unsuitable works, and distinct usable alternatives. Record image provenance and actual file paths before running.",
+    "comparison": "Compare a plain-agent baseline with the skill under the same task, image pool, and presentation budget.",
+    "mechanical_checks": [
+      "Stable candidate identity and index mapping survive query completion permutations.",
+      "Exact reposts do not consume multiple selection slots; provenance is retained.",
+      "Download failures are replaced only within the retained pool, with shortfalls reported.",
+      "Shared gallery URLs do not automatically collapse different images.",
+      "The reported decoded-preview count and displayed-candidate count match their actual artifacts."
+    ],
+    "visual_rubric": [
+      "Relevance and feasibility: candidates respect the brief and can support its important page types.",
+      "Decision-relevant difference: alternatives change permitted design choices instead of merely relabeling near duplicates.",
+      "Constraint-aware coverage: suitable distinct alternatives in the pool are not silently omitted, and irrelevant candidates are not added to satisfy a numerical quota.",
+      "Evidence honesty: unknown details and unavailable previews are identified rather than inferred from titles."
+    ],
+    "do_not_score": [
+      "A fixed count of four directions or fourteen images.",
+      "Hue differences when color is constrained by the brief.",
+      "Adjacent-layout differences when repeated structure helps comparison.",
+      "Query count or source count as a substitute for visual differences."
+    ],
+    "blind_review": "Randomize anonymous A/B outputs and keep the answer key separate. Record reviewer, reviewed_at, winner, rubric-based reason, and an attestation that judgment preceded revealing the key. Pending cases do not count as completed human evidence."
+  },
+  "cases": [
+    {
+      "id": "narrative_no_style_given",
+      "prompt": "把游戏投资叙事做成视觉主导的分享 PPT，没有指定风格。请先给我真正不同且适合正文的灵感选择。",
+      "input_files": [],
+      "fixture_requirements": "A frozen pool containing repeated dark cinematic covers, reposted template images under different pin IDs, and several relevant but distinct layout systems.",
+      "baseline_output": null,
+      "with_skill_output": null,
+      "assertions": [
+        "Layout keywords target presentation layouts by page type; style-element keywords spread across the user's own words, rendering styles and languages; the two are kept in separate groups.",
+        "The gallery shows each keyword group's results in Pinterest order without the agent dropping images by taste; a reposted template appears once per gallery.",
+        "Directions are written only after the user picks, from the picked images, and claims about content-page support are tied to those images."
+      ],
+      "human_notes": "Judge the usefulness of differences and the relation to source content; no required direction count.",
+      "status": "pending"
+    },
+    {
+      "id": "named_style_keywords_stay_on_it",
+      "prompt": "用像素风做一套培训 PPT，先帮我找参考。",
+      "input_files": [],
+      "fixture_requirements": "A frozen pool with slide layouts by page type, pictures of the named style (interface, icons, scenes, textures) and look-alike styles that are not it.",
+      "baseline_output": null,
+      "with_skill_output": null,
+      "assertions": [
+        "Every keyword carries the named style's own name: its ready-made decks, slides made in it by page type, and its own elements; brief.style_terms lists those names.",
+        "Generic business layouts (flow charts, comparison slides, pricing tables without the style's name) and look-alike styles are not searched unless the user asks, with their words in beyond_style.",
+        "The agent opens the original images, then offers two or three pairings, each composed into one board (layouts on the left, style elements on the right), without removing any image; the user takes one, mixes or picks their own."
+      ],
+      "human_notes": "Judge whether the layout groups are slides one can lay out from and the style groups stay in the named style; the combination is the user's choice.",
+      "status": "pending"
+    },
+    {
+      "id": "unrelated_operational_report",
+      "prompt": "为工业运营月报找 PPT 灵感，需要趋势、流程和三个工厂的同口径比较，风格尚未确定。",
+      "input_files": [],
+      "fixture_requirements": "A separate frozen pool from an unrelated domain: usable data layouts, diagrams, decorative posters, and near-duplicate corporate templates.",
+      "baseline_output": null,
+      "with_skill_output": null,
+      "assertions": [
+        "Keywords cover the data, process and comparison page types the content needs.",
+        "The agent does not drop posters or plain templates on the user's behalf; after the pick it says what each chosen image can and cannot carry.",
+        "The review may recommend repeated layouts for the factory comparison."
+      ],
+      "human_notes": "Check transfer beyond the original narrative example; compare comprehension and page-type usefulness, not spectacle.",
+      "status": "pending"
+    },
+    {
+      "id": "monochrome_brand_constraints",
+      "prompt": "品牌限定黑白和指定字体，请在这些条件内给机构简报找不同的版式方向。",
+      "input_files": [],
+      "fixture_requirements": "A frozen pool containing several monochrome hierarchy/grid treatments plus colorful, visually distinct but brand-incompatible examples.",
+      "baseline_output": null,
+      "with_skill_output": null,
+      "assertions": [
+        "Color and font constraints stay fixed in the keywords and in the direction written from the picks.",
+        "Images that conflict with the brand constraint are pointed out to the user, not silently dropped.",
+        "If the user's picks support only two directions, the result does not invent more."
+      ],
+      "human_notes": "Same colors are not evidence of poor diversity; assess meaningful differences within the constraint set.",
+      "status": "pending"
+    },
+    {
+      "id": "precise_reference_and_comparison_boundary",
+      "prompt": "严格使用我选好的这套模板，连续三页分别展示三个地区的相同指标，不需要再找新风格。",
+      "input_files": [],
+      "fixture_requirements": "A complete user-selected template with usable comparison layouts and explicit style specifications.",
+      "baseline_output": null,
+      "with_skill_output": null,
+      "assertions": [
+        "No additional inspiration search is required when the supplied reference is sufficient.",
+        "No incompatible direction is added to achieve a diversity quota.",
+        "Repeated layouts are allowed when they aid comparison; any variation has a content-driven reason."
+      ],
+      "human_notes": "This is a boundary case against overgeneralizing exploration and adjacent-layout rules.",
+      "status": "pending"
+    }
+  ]
+}

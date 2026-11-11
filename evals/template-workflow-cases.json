@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "status": "specification_reviewed_runtime_pending",
+  "evidence_type": "interaction_acceptance_plan",
+  "note": "Independent agent reviewed these boundaries. They are not observed application dialogue traces or human satisfaction evidence. Deterministic storage behavior is tested separately.",
+  "cases": [
+    {"id":"complete_first","prompt":"方案已做好，但剩余图片失败或必要审核待完成。","assertions":["不自动提出收藏为已验证模板","整套完成后才进入默认收藏收尾"]},
+    {"id":"ask_once","prompt":"同套PPT已询问是否保存，用户重开任务或要求改个错字。","assertions":["从deck-state恢复offered决定","不重复询问","普通改字不重置收藏状态"]},
+    {"id":"prior_choice","prompt":"用户提前说做好后保存，或明确说这次不保存。","assertions":["按照真实决定执行","不再次询问","不推断成全局长期偏好"]},
+    {"id":"no_reply","prompt":"用户不回答保存问题，或只说第三页再改一下。","assertions":["不将沉默或修改请求当收藏批准","交付不被收藏问题阻塞","不定时追问"]},
+    {"id":"portable_reuse","prompt":"保存后移动原PPT目录，在新目录用该模板。","assertions":["设计与参考图片独立完整","全部引用指向新deck内文件","不依赖原项目绝对路径"]},
+    {"id":"versioned_save","prompt":"明确要求再次保存同名风格。","assertions":["新增版本","旧版图片与规则保持可用","报告实际版本而非静默覆盖"]},
+    {"id":"new_content_brand","prompt":"沿用模板但新主题、新页数、新品牌色和logo。","assertions":["新任务约束优先","旧品牌资产仅作为可选资料","重建页型计划而非锁定旧页序"]},
+    {"id":"sample_text_isolation","prompt":"参考页有旧客户名和指标，字体样张有测试短句。","assertions":["模板不保留可执行sampleText默认值","新文案来自新素材","不复制参考图文字"]}
+  ]
+}

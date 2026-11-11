@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "id": "t01",
+      "prompt": "列出我收藏过的PPT风格模板，先别生成新PPT。",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "template"
+    },
+    {
+      "id": "t02",
+      "prompt": "把刚完成的这套PPT设计和选中的参考图存成暖白编辑风，以后复用。",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "template"
+    },
+    {
+      "id": "t03",
+      "prompt": "用我之前收藏的暖白编辑风，把这份新演讲稿做成完整的图像版PPT。",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "deck"
+    },
+    {
+      "id": "t04",
+      "prompt": "把我存的PPT风格模板v001载入新项目，先别出方案或生成图片。",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "template"
+    },
+    {
+      "id": "t05",
+      "prompt": "在原生PowerPoint母版中调整所有文本占位框，要保留可编辑文字。",
+      "expected_skill": "editable-slides",
+      "expected_stage": "editable"
+    },
+    {
+      "id": "t06",
+      "prompt": "仅解释PPT母版和视觉风格模板的区别，不操作任何文件。",
+      "expected_skill": "none",
+      "expected_stage": "none"
+    }
+  ]
+}

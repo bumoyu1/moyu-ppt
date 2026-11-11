@@ -1,0 +1,53 @@
+{
+  "name": "moyu-ppt",
+  "version": "1.0.0",
+  "owner": "摸鱼小李",
+  "author": "摸鱼小李",
+  "updated_at": "2026-11-11",
+  "status": "active",
+  "maturity_tier": "production",
+  "lifecycle_stage": "production",
+  "context_budget_tier": "production",
+  "review_cadence": "quarterly",
+  "intent": {
+    "job_to_be_done": "Turn raw text into a visual-led professional PPT system: style, spatial briefs, generated slide images, and an image-backed pptx.",
+    "target_users": [
+      "operators producing pitch, strategy, or article-to-PPT decks",
+      "agents that must keep whole-deck visual coherence across independently generated slides"
+    ],
+    "inputs": [
+      "raw article, speech, or briefing text",
+      "optional audience, purpose, aspect ratio, page count, fusion ratio",
+      "optional style/IP/reference images",
+      "optional brand assets for [C] placement",
+      "generation channel and pace preference"
+    ],
+    "outputs": [
+      "scope-matched inspiration/style/plans/deck/revision",
+      "typography role system with optional T specimens",
+      "validated image-backed pptx",
+      "user-approved local style templates with portable assets and versioned reuse"
+    ],
+    "exclusions": [
+      "single-page 图文一体化 / 知识卡片",
+      "公众号排版输出 or HTML decks (公众号 articles are fine as source material)",
+      "generic image prompts unrelated to slides",
+      "spreadsheet analysis, video, or legal/financial/medical claims beyond source"
+    ]
+  },
+  "target_platforms": [
+    "openai",
+    "claude",
+    "generic",
+    "agent-skills-compatible"
+  ],
+  "release_gates": [
+    "validate_skill",
+    "observed_semantic_routing",
+    "local_runtime_tests",
+    "export_skill_ir",
+    "output_evidence_boundary",
+    "root_entrypoint_isolation",
+    "local_copy_install"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "instructions": "For each request choose the best skill and requested stage. This is a semantic selection probe, not actual app routing. Return id, skill, stage, reason. none means answer without starting artifact production.",
+  "cases": [
+    {
+      "id": "r01",
+      "prompt": "把这篇公众号文章做成一套视觉主导的PPT"
+    },
+    {
+      "id": "r02",
+      "prompt": "将Excel的季度数据做成幻灯片视觉稿并导出图像版PPTX"
+    },
+    {
+      "id": "r03",
+      "prompt": "把这篇文章做成一套PPT，不要知识卡片"
+    },
+    {
+      "id": "r04",
+      "prompt": "用我上传的logo和IP形象做一套品牌展示PPT"
+    },
+    {
+      "id": "r05",
+      "prompt": "Make an image-backed presentation deck for our customer workshop."
+    },
+    {
+      "id": "r06",
+      "prompt": "给这套路演PPT找几组不同的参考，先不做方案"
+    },
+    {
+      "id": "r07",
+      "prompt": "只确定这套PPT的配色、字体和栅格，不出图"
+    },
+    {
+      "id": "r08",
+      "prompt": "为这套PPT做全篇空间定位图，先不生图"
+    },
+    {
+      "id": "r09",
+      "prompt": "上一套图像版PPT的第3页标题换成这句，其他页沿用"
+    },
+    {
+      "id": "r10",
+      "prompt": "按已确认的方案继续生成剩下的PPT页面"
+    },
+    {
+      "id": "r11",
+      "prompt": "给这套PPT生成一张标题字形参考图，用在内容页"
+    },
+    {
+      "id": "r12",
+      "prompt": "保持品牌黑白和指定字体，帮这套PPT找版式灵感"
+    },
+    {
+      "id": "r13",
+      "prompt": "给我的演讲稿设计整套幻灯片，快速模式"
+    },
+    {
+      "id": "r14",
+      "prompt": "帮我给整套路演幻灯片做绘图提示词"
+    },
+    {
+      "id": "r15",
+      "prompt": "把这篇文章排成公众号HTML"
+    },
+    {
+      "id": "r16",
+      "prompt": "把这段关于PPT风格配置的文章翻成英语，只返回文字"
+    },
+    {
+      "id": "r17",
+      "prompt": "解释PowerPoint的风格配置是什么意思"
+    },
+    {
+      "id": "r18",
+      "prompt": "推荐几个Pinterest灵感账号，不用做演示文稿"
+    },
+    {
+      "id": "r19",
+      "prompt": "给我一张知识卡片，不要整套PPT"
+    },
+    {
+      "id": "r20",
+      "prompt": "把这一页独立大纲做成图文方案和绘图提示词"
+    },
+    {
+      "id": "r21",
+      "prompt": "做一个可以在浏览器里编辑的HTML幻灯片站点"
+    },
+    {
+      "id": "r22",
+      "prompt": "修改我上传的可编辑PowerPoint文件，保留原生文本框"
+    },
+    {
+      "id": "r23",
+      "prompt": "做一套原生可编辑PPTX，图表和文字都要能改"
+    },
+    {
+      "id": "r24",
+      "prompt": "画一张森林风景，不含幻灯片和文字"
+    },
+    {
+      "id": "r25",
+      "prompt": "只分析这份Excel表格的趋势，不做演示"
+    },
+    {
+      "id": "r26",
+      "prompt": "这个ppt skill有什么问题，先只审计"
+    },
+    {
+      "id": "r27",
+      "prompt": "帮我升级moyu-ppt技能里的字体规则"
+    },
+    {
+      "id": "r28",
+      "prompt": "只要给电影海报生成艺术字，不制作幻灯片"
+    }
+  ]
+}

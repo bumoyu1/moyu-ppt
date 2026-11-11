@@ -1,0 +1,173 @@
+{
+  "schema_version": "2.0",
+  "cases": [
+    {
+      "id": "r01",
+      "prompt": "把这篇公众号文章做成一套视觉主导的PPT",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "deck"
+    },
+    {
+      "id": "r02",
+      "prompt": "将Excel的季度数据做成幻灯片视觉稿并导出图像版PPTX",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "deck"
+    },
+    {
+      "id": "r03",
+      "prompt": "把这篇文章做成一套PPT，不要知识卡片",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "deck"
+    },
+    {
+      "id": "r04",
+      "prompt": "用我上传的logo和IP形象做一套品牌展示PPT",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "deck"
+    },
+    {
+      "id": "r05",
+      "prompt": "Make an image-backed presentation deck for our customer workshop.",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "deck"
+    },
+    {
+      "id": "r06",
+      "prompt": "给这套路演PPT找几组不同的参考，先不做方案",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "inspiration"
+    },
+    {
+      "id": "r07",
+      "prompt": "只确定这套PPT的配色、字体和栅格，不出图",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "style"
+    },
+    {
+      "id": "r08",
+      "prompt": "为这套PPT做全篇空间定位图，先不生图",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "plans"
+    },
+    {
+      "id": "r09",
+      "prompt": "上一套图像版PPT的第3页标题换成这句，其他页沿用",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "revise"
+    },
+    {
+      "id": "r10",
+      "prompt": "按已确认的方案继续生成剩下的PPT页面",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "deck"
+    },
+    {
+      "id": "r11",
+      "prompt": "给这套PPT生成一张标题字形参考图，用在内容页",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "style"
+    },
+    {
+      "id": "r12",
+      "prompt": "保持品牌黑白和指定字体，帮这套PPT找版式灵感",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "inspiration"
+    },
+    {
+      "id": "r13",
+      "prompt": "给我的演讲稿设计整套幻灯片，快速模式",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "deck"
+    },
+    {
+      "id": "r14",
+      "prompt": "帮我给整套路演幻灯片做绘图提示词",
+      "expected_skill": "moyu-ppt",
+      "expected_stage": "plans"
+    },
+    {
+      "id": "r15",
+      "prompt": "把这篇文章排成公众号HTML",
+      "expected_skill": "none",
+      "expected_stage": "none"
+    },
+    {
+      "id": "r16",
+      "prompt": "把这段关于PPT风格配置的文章翻成英语，只返回文字",
+      "expected_skill": "none",
+      "expected_stage": "none"
+    },
+    {
+      "id": "r17",
+      "prompt": "解释PowerPoint的风格配置是什么意思",
+      "expected_skill": "none",
+      "expected_stage": "none"
+    },
+    {
+      "id": "r18",
+      "prompt": "推荐几个Pinterest灵感账号，不用做演示文稿",
+      "expected_skill": "none",
+      "expected_stage": "none"
+    },
+    {
+      "id": "r19",
+      "prompt": "给我一张知识卡片，不要整套PPT",
+      "expected_skill": "knowledge-card",
+      "expected_stage": "single-page"
+    },
+    {
+      "id": "r20",
+      "prompt": "把这一页独立大纲做成图文方案和绘图提示词",
+      "expected_skill": "knowledge-card",
+      "expected_stage": "single-page"
+    },
+    {
+      "id": "r21",
+      "prompt": "做一个可以在浏览器里编辑的HTML幻灯片站点",
+      "expected_skill": "html-deck",
+      "expected_stage": "html"
+    },
+    {
+      "id": "r22",
+      "prompt": "修改我上传的可编辑PowerPoint文件，保留原生文本框",
+      "expected_skill": "editable-slides",
+      "expected_stage": "editable"
+    },
+    {
+      "id": "r23",
+      "prompt": "做一套原生可编辑PPTX，图表和文字都要能改",
+      "expected_skill": "editable-slides",
+      "expected_stage": "editable"
+    },
+    {
+      "id": "r24",
+      "prompt": "画一张森林风景，不含幻灯片和文字",
+      "expected_skill": "imagegen",
+      "expected_stage": "image"
+    },
+    {
+      "id": "r25",
+      "prompt": "只分析这份Excel表格的趋势，不做演示",
+      "expected_skill": "none",
+      "expected_stage": "none"
+    },
+    {
+      "id": "r26",
+      "prompt": "这个ppt skill有什么问题，先只审计",
+      "expected_skill": "skill-authoring",
+      "expected_stage": "audit"
+    },
+    {
+      "id": "r27",
+      "prompt": "帮我升级moyu-ppt技能里的字体规则",
+      "expected_skill": "skill-authoring",
+      "expected_stage": "improve"
+    },
+    {
+      "id": "r28",
+      "prompt": "只要给电影海报生成艺术字，不制作幻灯片",
+      "expected_skill": "imagegen",
+      "expected_stage": "image"
+    }
+  ]
+}

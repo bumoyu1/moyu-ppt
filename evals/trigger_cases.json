@@ -1,0 +1,214 @@
+{
+  "schema_version": 2,
+  "purpose": "Current routing descriptions for package/IR. Scored semantic evidence is kept with the development reports (not shipped in the skill package); no lexical predictor.",
+  "should_trigger": [
+    {
+      "text": "把这篇公众号文章做成一套视觉主导的PPT",
+      "id": "r01",
+      "family": "moyu-ppt",
+      "stage": "deck"
+    },
+    {
+      "text": "将Excel的季度数据做成幻灯片视觉稿并导出图像版PPTX",
+      "id": "r02",
+      "family": "moyu-ppt",
+      "stage": "deck"
+    },
+    {
+      "text": "把这篇文章做成一套PPT，不要知识卡片",
+      "id": "r03",
+      "family": "moyu-ppt",
+      "stage": "deck"
+    },
+    {
+      "text": "用我上传的logo和IP形象做一套品牌展示PPT",
+      "id": "r04",
+      "family": "moyu-ppt",
+      "stage": "deck"
+    },
+    {
+      "text": "Make an image-backed presentation deck for our customer workshop.",
+      "id": "r05",
+      "family": "moyu-ppt",
+      "stage": "deck"
+    },
+    {
+      "text": "给这套路演PPT找几组不同的参考，先不做方案",
+      "id": "r06",
+      "family": "moyu-ppt",
+      "stage": "inspiration"
+    },
+    {
+      "text": "只确定这套PPT的配色、字体和栅格，不出图",
+      "id": "r07",
+      "family": "moyu-ppt",
+      "stage": "style"
+    },
+    {
+      "text": "为这套PPT做全篇空间定位图，先不生图",
+      "id": "r08",
+      "family": "moyu-ppt",
+      "stage": "plans"
+    },
+    {
+      "text": "上一套图像版PPT的第3页标题换成这句，其他页沿用",
+      "id": "r09",
+      "family": "moyu-ppt",
+      "stage": "revise"
+    },
+    {
+      "text": "按已确认的方案继续生成剩下的PPT页面",
+      "id": "r10",
+      "family": "moyu-ppt",
+      "stage": "deck"
+    },
+    {
+      "text": "给这套PPT生成一张标题字形参考图，用在内容页",
+      "id": "r11",
+      "family": "moyu-ppt",
+      "stage": "style"
+    },
+    {
+      "text": "保持品牌黑白和指定字体，帮这套PPT找版式灵感",
+      "id": "r12",
+      "family": "moyu-ppt",
+      "stage": "inspiration"
+    },
+    {
+      "text": "给我的演讲稿设计整套幻灯片，快速模式",
+      "id": "r13",
+      "family": "moyu-ppt",
+      "stage": "deck"
+    },
+    {
+      "text": "帮我给整套路演幻灯片做绘图提示词",
+      "id": "r14",
+      "family": "moyu-ppt",
+      "stage": "plans"
+    },
+    {
+      "text": "列出我收藏过的PPT风格模板，先别生成新PPT。",
+      "id": "t01",
+      "family": "moyu-ppt",
+      "stage": "template"
+    },
+    {
+      "text": "把刚完成的这套PPT设计和选中的参考图存成暖白编辑风，以后复用。",
+      "id": "t02",
+      "family": "moyu-ppt",
+      "stage": "template"
+    },
+    {
+      "text": "用我之前收藏的暖白编辑风，把这份新演讲稿做成完整的图像版PPT。",
+      "id": "t03",
+      "family": "moyu-ppt",
+      "stage": "deck"
+    },
+    {
+      "text": "把我存的PPT风格模板v001载入新项目，先别出方案或生成图片。",
+      "id": "t04",
+      "family": "moyu-ppt",
+      "stage": "template"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "text": "把这篇文章排成公众号HTML",
+      "id": "r15",
+      "family": "none",
+      "stage": "none"
+    },
+    {
+      "text": "把这段关于PPT风格配置的文章翻成英语，只返回文字",
+      "id": "r16",
+      "family": "none",
+      "stage": "none"
+    },
+    {
+      "text": "解释PowerPoint的风格配置是什么意思",
+      "id": "r17",
+      "family": "none",
+      "stage": "none"
+    },
+    {
+      "text": "推荐几个Pinterest灵感账号，不用做演示文稿",
+      "id": "r18",
+      "family": "none",
+      "stage": "none"
+    },
+    {
+      "text": "只分析这份Excel表格的趋势，不做演示",
+      "id": "r25",
+      "family": "none",
+      "stage": "none"
+    },
+    {
+      "text": "仅解释PPT母版和视觉风格模板的区别，不操作任何文件。",
+      "id": "t06",
+      "family": "none",
+      "stage": "none"
+    }
+  ],
+  "near_neighbor": [
+    {
+      "text": "给我一张知识卡片，不要整套PPT",
+      "id": "r19",
+      "family": "knowledge-card",
+      "stage": "single-page"
+    },
+    {
+      "text": "把这一页独立大纲做成图文方案和绘图提示词",
+      "id": "r20",
+      "family": "knowledge-card",
+      "stage": "single-page"
+    },
+    {
+      "text": "做一个可以在浏览器里编辑的HTML幻灯片站点",
+      "id": "r21",
+      "family": "html-deck",
+      "stage": "html"
+    },
+    {
+      "text": "修改我上传的可编辑PowerPoint文件，保留原生文本框",
+      "id": "r22",
+      "family": "editable-slides",
+      "stage": "editable"
+    },
+    {
+      "text": "做一套原生可编辑PPTX，图表和文字都要能改",
+      "id": "r23",
+      "family": "editable-slides",
+      "stage": "editable"
+    },
+    {
+      "text": "画一张森林风景，不含幻灯片和文字",
+      "id": "r24",
+      "family": "imagegen",
+      "stage": "image"
+    },
+    {
+      "text": "这个ppt skill有什么问题，先只审计",
+      "id": "r26",
+      "family": "skill-authoring",
+      "stage": "audit"
+    },
+    {
+      "text": "帮我升级moyu-ppt技能里的字体规则",
+      "id": "r27",
+      "family": "skill-authoring",
+      "stage": "improve"
+    },
+    {
+      "text": "只要给电影海报生成艺术字，不制作幻灯片",
+      "id": "r28",
+      "family": "imagegen",
+      "stage": "image"
+    },
+    {
+      "text": "在原生PowerPoint母版中调整所有文本占位框，要保留可编辑文字。",
+      "id": "t05",
+      "family": "editable-slides",
+      "stage": "editable"
+    }
+  ]
+}

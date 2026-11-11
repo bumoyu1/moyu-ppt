@@ -1,0 +1,15 @@
+# 用户作品与运行状态（每套作品应建在自己的项目目录，不随技能包发布）
+decks/
+run-state*.json
+*.lock
+
+# 本机偏好文件（设置在用户配置目录，由 scripts/configure.py 管理）
+assets/user-config.json
+
+# Python / 系统
+__pycache__/
+*.pyc
+.DS_Store
+
+# 本机工具配置
+.claude/

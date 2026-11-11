@@ -1,0 +1,46 @@
+interface:
+  display_name: "摸鱼PPT"
+  short_description: "视觉PPT：确认需求与方向、字体系统、样页后整套交付，收藏并复用风格模板"
+  default_prompt: "Read the current $moyu-ppt SKILL.md and the references for the active stage. On first use run scripts/configure.py status and, if it reports not configured, do the one-time setup in references/setup.md (where the user runs the skill, image model, inspiration-search key) before the task. Default to standard mode with five user checkpoints: read the material into a content skeleton first (knowledge deck or speech deck, the throughline, what each section means with verbatim source evidence, page tiers and what each tier leaves off-screen; references/content-structure-method.md) and confirm it together with the brief (pages, aspect ratio, audience/purpose, image-text fusion ratio suggested by content type: 80/20 for speech decks, about 70/30 for knowledge decks, title layout chosen by the user: uniform (every content title at one position and size, kept by size locks) or free (each page places its title by its own composition, no size lock; suggested for talks and picture-led styles), overall feel); then write every on-screen line of every page into one copy sheet (page-copy.md, each line marked 原文/压缩/新增/引语; no added slogans or summary lines, and on knowledge decks quotations and attributions stay off unless the user asks), show the whole sheet once (not page by page) and record the confirmation with decide copy before searching or designing, after which plans may show only those lines; check the local reference library first, then search with keywords only (the user, not the agent, judges the images; write keywords in separate groups by category; when the user named a style every keyword keeps its name: its decks, slides made in it, and its own elements such as interface, icons, scenes and textures; generic business layouts and look-alike styles are searched only if the user asks): show a numbered full-size gallery grouped by category, after opening the original images (not the downscaled boards) offer two or three pairing suggestions (which layout numbers with which style-element numbers, what each lends, the weak spot), each composed into one board with ref_gallery.py combo, without removing any image; describe styles and attach references from the original files only; let the user take one, mix or pick their own (and say what to save to the library), and only then combine the chosen layouts and look into a direction with a visible typography plan; show the full outline with the coverage table and 1-3 real pilot slides before generating the rest; offer template saving once after delivery. Record every decision with scripts/deck_state.py using the user's actual words, and run deck_state.py status when resuming. Design typography from the content without default font search. Cover, chapter and closing slides are showcase pages: compose each one boldly and differently (lettering as the subject or inside the scene, a different shot size, full bleed), without the content-title size lock; a new point is a variation page, and stable pages are only for side-by-side comparison or step-by-step runs. With the uniform title layout, separate glyph T references from reusable full-canvas SZ geometry guides; use text_lock.py guide before the first pilot when needed, template after the user picks the right size, and measure each batch. Explicit per-page edit targets must stay target_image edits through native export, with versioned outputs. Size guides assist consistency and do not guarantee exact geometry."
+  examples:
+    - "把这篇公众号文章做成一套视觉PPT，灵感要有不同方向"
+    - "只给这套PPT做风格和字体规范，先不生图"
+    - "先生成标题字形参考，再用于这套幻灯片的标题"
+    - "修改上一套图像版PPT的第3页"
+    - "做完后把喜欢的设计和参考图存成模板"
+    - "用我收藏的暖白编辑风做新材料"
+    - "查看我保存过的PPT风格模板"
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets: [openai, claude, generic, agent-skills-compatible]
+  activation:
+    mode: "implicit-or-explicit"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+    runtime: "Python 3.9+; Pillow; python-pptx for delivery; optional macOS Vision/Swift"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+    generated_public_claims: "evidence-bound"
+  permissions:
+    network: "Configured reference search and image generation; dry-run and local selection are offline"
+    file_write: "Per-deck workspace (deck-state.json via deck_state.py) and candidate cache; user preferences without keys; approved design templates in a separate local library"
+    subprocess: "Bundled extraction, generation, typography, local OCR, PPTX validation and template library scripts"
+    interactive: "Only unresolved user decisions, following existing authorization and selected pace"
+  degradation:
+    openai: "Native image tool when available; actual model identity may be platform-managed"
+    claude: "No native image generation in Claude Code: use a configured external provider (ZenMux/Ark keys) and say so at intake; without keys deliver plans and exported inputs only"
+    generic: "Capability check required; partial stage output when unavailable"
+    agent-skills-compatible: "Source instructions; runtime support must be verified"
+gates:
+  production:
+    - "Scoped routing and source fidelity"
+    - "Local runtime tests and observed semantic routing probe"
+    - "Structured reference binding and generation preflight"
+    - "Image and PPTX validation with explicit pending visual review"
+    - "Isolated local-copy installation check"
+policy:
+  allow_implicit_invocation: true
